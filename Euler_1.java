@@ -11,6 +11,7 @@ public class Euler_1 extends Euler {
         long sum = 0;
         for(int i = 3; i < 1000; i+=3) sum += i;
         for(int j = 5; j < 1000; j+=5) sum += j;
+        for(int k = 15; k < 1000; k+=15) sum -= k;
         String[] solve = {"The sum of all multiples of three and five below 1000 is", ""+sum};
         return solve;
    }

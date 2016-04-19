@@ -16,7 +16,7 @@ public class Euler_4 extends Euler {
 			for(j=9; j >= 0 && !flag; j--)
 				for(k=9; k >= 0 && !flag; k--)
 				{
-					long num = i*100001+k*010010+j*001100;
+					long num = i*100001+k*10010+j*1100;
 					for(int l = 999; l >= 100 && !flag; l--)
 					{
 						if(num%l == 0)
@@ -32,7 +32,7 @@ public class Euler_4 extends Euler {
 				for(j=9; j >= 0 && !flag; j--)
 					for(k=9; k >= 0 && !flag; k--)
 					{
-						long num = i*10001+k*01010+j*00100;
+						long num = i*10001+k*1010+j*100;
 						for(int l = 999; l >= 100 && !flag; l--)
 						{
 							if(num%l == 0)
