@@ -6,7 +6,7 @@ public class Euler_11 extends Euler {
 		euler = new Euler_11();
 		main();
 	}
-	
+
 	public String[] solve()
 	{
 		final int[][] grid = {
@@ -32,26 +32,40 @@ public class Euler_11 extends Euler {
 			{ 1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48 }
 		};
 		long max_Product = 1;
-		for(int i = 0; i < 16; i++)
-			for(int j = 0; j < 16; j++)
+		for(int i = 0; i < 20; i++)
+		{
+			for(int j = 0; j < 20; j++)
 			{
-				long product = 1;
-				for(int k = 0; k < 4; k++)
-					product *= grid[i+k][j+k];
-				max_Product = Math.max(max_Product,product);
+				if(i <= 16)
+				{
+						long product = 1;
+						for(int k = 0; k < 4; k++)
+							product *= grid[i+k][j];
+						max_Product = Math.max(product,max_Product);
+						if(j <= 16)
+						{
+							product = 1;
+							for(int k = 0; k < 4; k++)
+								product *= grid[i+k][j+k];
+							max_Product = Math.max(product,max_Product);
+						}
+				}
+				if(j <= 16)
+				{
+					long product = 1;
+					for(int k = 0; k < 4; k++)
+						product *= grid[i][j+k];
+					max_Product = Math.max(product,max_Product);
+					if(i >= 3)
+					{
+						product = 1;
+						for(int k = 0; k < 4; k++)
+							product *= grid[i-k][j+k];
+						max_Product = Math.max(product,max_Product);
+					}
+				}
 			}
-		for(int i = 0; i < grid.length; i++)
-			for(int j = 0; j < 16; j++)
-			{
-				long product = 1;
-				for(int k = 0; k < 4; k++)
-					product *= grid[i][j+k];
-				max_Product = Math.max(max_Product,product);
-				product = 1;
-				for(int k = 0; k < 4; k++)
-					product *= grid[j+k][i];
-				max_Product = Math.max(max_Product,product);
-			}
+		}
 		String[] solve = {"The highest product in the grid is", ""+max_Product };
 		return solve;
 	}

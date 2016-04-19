@@ -1,0 +1,15 @@
+package net.pyretaursoft.euler;
+
+public class Euler_ extends Euler {
+	public static void main(String[] args)
+	{
+		euler = new Euler_();
+		main();
+	}
+	
+	public String[] solve()
+	{
+		String[] solve = { "", ""+ };
+		return solve;
+	}
+}
