@@ -23,7 +23,7 @@ public class Euler_10 extends Euler {
 		for(int i = 3; i < 2000000L; i+=2)
 			if(isPrime(i))
 				sum += i;
-		String[] solve = {"", ""+sum };
+		String[] solve = {"The sum of all primes below 2 mill is", ""+sum };
 		return solve;
 	}
 }

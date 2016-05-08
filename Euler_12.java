@@ -45,7 +45,7 @@ public class Euler_12 extends Euler {
 				i++;
 			else
 				flag = false;
-		String[] solve = { "", ""+num };
+		String[] solve = { "The first triangular number with over five hundred divisors is", ""+num };
 		return solve;
 	}
 }

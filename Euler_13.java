@@ -116,7 +116,7 @@ public class Euler_13 extends Euler {
 		BigInteger sum = BigInteger.ZERO;
 		for(int i = 0; i < numbers.length; i++)
 			sum = sum.add(numbers[i]);
-		String[] solve = { "", ""+sum };
+		String[] solve = { "The sum of all fifty ten-digit numbers is", ""+sum };
 		return solve;
 	}
 }

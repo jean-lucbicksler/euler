@@ -25,7 +25,7 @@ public class Euler_14 extends Euler {
 	{
 		long max_length = 1;
 		long number = 0;
-		for(int i = 500000; i < 1000000; i++)
+		for(int i = 750000; i < 1000000; i++)
 		{
 			long length = collatzLength(i);
 			if(length > max_length)
@@ -34,7 +34,7 @@ public class Euler_14 extends Euler {
 				max_length = length;
 			}
 		}
-		String[] solve = { "", ""+number };
+		String[] solve = { "The longest collatz sequence from a number below 1 mill starts with", ""+number };
 		return solve;
 	}
 }

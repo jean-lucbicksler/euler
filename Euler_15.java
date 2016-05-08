@@ -1,5 +1,7 @@
 package net.pyretaursoft.euler;
 
+import java.math.BigInteger;
+
 public class Euler_15 extends Euler {
 	public static void main(String[] args)
 	{
@@ -9,18 +11,13 @@ public class Euler_15 extends Euler {
 
 	public String[] solve()
 	{
-		int sum = 0;
-		for(long path = 0b11111111111111111111;	path < 1099510579200L; path++)
-		{
-			int count = 0;
-			for(int i = 0; i < 40; i++)
-				if(((1 << i) & path) == 1)
-					count++;
-			if(count == 20)
-				sum++;
-			System.out.println(path - 1099510579200L);
-		}
-		String[] solve = { "", ""+sum };
+		BigInteger product = BigInteger.ONE;
+		byte[] i = new byte[1];
+		for(i[0] = 40; i[0] > 20; i[0]--)
+			product=product.multiply(new BigInteger(i));
+		for(i[0] = 20; i[0] > 1; i[0]--)
+			product=product.divide(new BigInteger(i));
+		String[] solve = { "The number of paths in the lattice is", ""+product };
 		return solve;
 	}
 }

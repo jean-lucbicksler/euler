@@ -19,7 +19,7 @@ public class Euler_20 extends Euler {
 		BigInteger sum = BigInteger.ZERO;
 		for(; factorial.compareTo(BigInteger.ZERO)>0; factorial=factorial.divide(BigInteger.TEN))
 			sum=sum.add(factorial.mod(BigInteger.TEN));
-		String[] solve = { "", ""+sum };
+		String[] solve = { "The sum of all the digits in 100 factorial is", ""+sum };
 		return solve;
 	}
 }

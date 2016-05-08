@@ -20,7 +20,7 @@ public class Euler_16 extends Euler {
 		{
 			sum = sum.add(num.divide(i).mod(BigInteger.TEN));
 		}
-		String[] solve = { "", ""+sum };
+		String[] solve = { "The sum of the digits of the number 2^1000 is", ""+sum };
 		return solve;
 	}
 }
